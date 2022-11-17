@@ -53,6 +53,7 @@ const main = async () => {
       console.log(`Sucess exporting as car ${name}`)
     }
   }
+  
   console.log(chalk.cyan(`Storing at web3 storage`));
   const files = fs.readdirSync("./car");
   for(const file of files){
