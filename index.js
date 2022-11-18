@@ -47,13 +47,13 @@ const main = async () => {
 
     if(ipfs){
       console.log(`${chalk.cyan("Pining")} ${chalk.green(ipfsHash)}`);
-
+      await ipfs.pin.add(ipfsHash)
       console.log(`Runing ${chalk.cyan(`ipfs dag export ${ipfsHash} > ./car/${name}.car`)}`)
       shell.exec(`ipfs dag export ${ipfsHash} > ./car/${name}.car`)
       console.log(`Sucess exporting as car ${name}`)
     }
   }
-  
+
   console.log(chalk.cyan(`Storing at web3 storage`));
   const files = fs.readdirSync("./car");
   for(const file of files){
