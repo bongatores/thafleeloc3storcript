@@ -11,7 +11,7 @@
 # production
 /build
 /assets
-
+/car
 # misc
 .yarn*
 .DS_Store
